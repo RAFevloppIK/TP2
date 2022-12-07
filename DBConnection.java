@@ -2,7 +2,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBConnection {
+public class DBConnection implements IDBConnection {
 	    
 		static String BDD = "nomBD";
 		static String url = "jdbc:mysql://localhost:3306/" + BDD;
@@ -24,7 +24,7 @@ public class DBConnection {
 	    
 	    
 
-	    
+	    @Override
 	    public Connection getConn() {
 			return conn;
 		}

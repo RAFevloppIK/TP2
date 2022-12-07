@@ -7,13 +7,13 @@ import java.sql.Statement;
 
 public class UniversiteRepository {
 	
-	
+	IDBConnection IBD;
 	Universite GetById(int universityId) throws SQLException {
 		
-		DBConnection BD= new DBConnection();
-		Connection connect=BD.getConn(); 
+		
+		Connection connect=IBD.getConn(); 
 		Statement stmt = connect.createStatement();
-		System.out.println("LogBD : début recherche de id université dans la base de donnée");
+		System.out.println("LogBD : debut recherche de id universite dans la base de donnee");
 		
 		String sql = "select * from universite where id_universite="+ universityId;
 		ResultSet rs = stmt.executeQuery(sql);
@@ -21,7 +21,7 @@ public class UniversiteRepository {
 		TypePackage p=TypePackage.valueOf(rs.getString(3));
 		Universite u = new Universite (rs.getInt(1),rs.getString(2),p);
 			
-		System.out.println("LogBD : université récupérée");
+		System.out.println("LogBD : universitï¿½ rï¿½cupï¿½rï¿½e");
 		
 		connect.close();
 		return u;	
