@@ -32,14 +32,14 @@ public class EtudiantService {
 		
 		
 		
-		 if (univ.getPack() == TypePackage.Standard)
+		 /*if (univ.getPack() == TypePackage.Standard)
 	     {
 	          stud.setNbLivreMensuel_Autorise(10);
 	     }
 	     else if (univ.getPack() == TypePackage.Premium)
 	     {
 	    	 stud.setNbLivreMensuel_Autorise(10*2);
-	     }                           
+	     }  */                          
 	     
 		 StudRep.add(stud);
 		 System.out.println("Log: Fin de l'op�ration d'ajout de l'�tudiant avec matricule "+matricule);

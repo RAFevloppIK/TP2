@@ -65,5 +65,18 @@ public class EtudiantRepository {
 		connect.close();
 		return false;
 	}
+	
+	boolean limite(Universite univ,n) {
+	if (univ.getPack() == TypePackage.Standard)
+    {
+         stud.setNbLivreMensuel_Autorise(10);
+    }
+    else if (univ.getPack() == TypePackage.Premium)
+    {
+   	 stud.setNbLivreMensuel_Autorise(10*2);
+    } 
+	}
 
-}
+
+
+
