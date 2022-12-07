@@ -13,7 +13,7 @@ public class EtudiantService {
 	    Etudiant stud = new Etudiant(matricule, nom, prenom, email,pwd,id_universite);
 	    Universite univ=UnivRep.GetById(id_universite);
 	    
-	    System.out.println("Log: d�but de l'op�ration d'ajout de l'�tudiant avec matricule "+matricule);
+	    System.out.println("Log: debut de l'operation d'ajout de l'etudiant avec matricule "+matricule);
 	    
 	    if(email == null || email.length() == 0)
 	    {
