@@ -21,7 +21,7 @@ public class Etudiant {
 			this.id_universite = id_universite;
 		}
 
-
+       
 		public int getMatricule() {
 			return matricule;
 		}
@@ -101,6 +101,8 @@ public class Etudiant {
 			this.pwd = pwd;
 		}
 
-		
-		
+		private void updateMensuel() {
+		if(TypePackage.Standard != null){}this.nbLivreMensuel_Autorise += 5;
+		if (TypePackage.Premium != null) {this.nbLivreMensuel_Autorise += 10;}
+		}
 	    }
